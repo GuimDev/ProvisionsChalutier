@@ -10,6 +10,7 @@ const addonConfig = {
     sourceFiles: [
         "textures/icon_dds/**",
         "Chalutier.lua",
+        "chalutier_low.jpg",
         "header.lua",
         "ProvisionsChalutier.txt",
         "README.md"
