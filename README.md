@@ -1,5 +1,7 @@
-Provisions Chalutier 1.0.0
+ProvisionsChalutier 1.0.0
 =============
+
+[![Esoui Prov's Chalutier page](https://img.shields.io/badge/esoui.com-Provision%27s%20Chalutier-green.svg)](https://www.esoui.com/downloads/info2203-ProvisionsChalutierFishing.html)
 
 Chalutier is a user Interface for The Elder Scrolls Online, designed to show fishing statement :
 
