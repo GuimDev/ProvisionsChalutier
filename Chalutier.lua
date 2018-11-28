@@ -73,8 +73,12 @@ function Chalutier_OnAction()
 		end
 
 		changeState(state)
+		ProvCha.UI.blocInfo:SetHidden(false)
 	elseif currentState ~= FSH_STATE_WAITING then
 		changeState(FSH_STATE_WAITING)
+		ProvCha.UI.blocInfo:SetHidden(true)
+	else
+		ProvCha.UI.blocInfo:SetHidden(true)
 	end
 end
 
