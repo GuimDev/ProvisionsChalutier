@@ -1,9 +1,8 @@
 ProvisionsTrawler 1.0.0
 =============
 
-TeamFormation is a user Interface for Fishing, show a progressbar for show you the actual state :
 
- - red : You do nothing ;
- - blue : You are fishing ;
- - green : You got a fish ! Don't forget it. 🐟
- - lightgreen : You caught it ! 🎣
+ - maroon : You are not fishing ; 😴
+ - steelblue : You are fishing ;  ⛵ RGB(75, 156, 213)
+ - limegreen : You got a fish ! You have to caught it ! 🎣 RGB(0, 204, 0) 
+ - maroon : You caught it ! 💰 RGB(101, 69, 0)
