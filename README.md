@@ -1,7 +1,7 @@
 Provisions Chalutier 1.0.0
 =============
 
-Chalutier is a user Interface for The Elder Scrolls Online, designed to fish and to show fishing statement :
+Chalutier is a user Interface for The Elder Scrolls Online, designed to show fishing statement :
 
  - maroon : You are not fishing ; 😴
  - steelblue : You are fishing ;  ⛵ RGB(75, 156, 213)
