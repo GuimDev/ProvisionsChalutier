@@ -1,0 +1,20 @@
+{
+  "name": "eso-buildergulp",
+  "version": "1.0.0",
+  "description": "Build and deploy for eso' Addons",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuimDev/ProvisionsTeamFormation/tree/dev/builderGulp/"
+  },
+  "author": "Provision",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-zip": "^4.2.0"
+  }
+}
