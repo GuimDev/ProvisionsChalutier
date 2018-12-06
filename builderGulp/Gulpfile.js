@@ -43,23 +43,32 @@ function getFileContent(filename) {
 	return fs.readFileSync(filename).toString();
 }
 
+function indexesIn(str, pattern) {
+	const result = [];
+	for (let i = 0; i < str.length; ++i)
+		if (str.substring(i, i + pattern.length) == pattern)
+			result.push(i);
+
+	return result;
+}
+
 function getVersion() {
 	const txtFile = getFileContent(addonConfig.modName + ".txt");
 
 	const version = (txtFile.match(/\n\#\# Version\: (\d{1,3}\.\d{1,3}\.\d{1,3}[a-z]?)/) || [])[1];
 
 	if (!version) {
-		console.log("Bad version in header of " + addonConfig.modName + ".txt");
+		log("Bad version in header of " + addonConfig.modName + ".txt");
 		process.exit();
 	}
 
 	for (let i = 0, content, match, file; i < addonConfig.filesWithVersionNumber.length; i++) {
 		file = addonConfig.filesWithVersionNumber[i];
 		content = getFileContent(file[0]);
-		match = content.match(new RegExp(version, "g")) || [];
+		match = indexesIn(content, version) || [];
 		if (match.length !== file[1]) {
-			console.log(`Error: Version not find. ${file[0]} ${match.length}/${file[1]}`);
-			console.log(`Current version: ${version}`);
+			log(`Error: Version not find. ${file[0]} ${match.length}/${file[1]}`);
+			log(`Current version: ${version}`);
 			process.exit();
 		}
 	}
