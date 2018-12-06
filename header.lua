@@ -4,7 +4,7 @@ ProvCha =
 	namePublic = "Prov's Chalutier",
 	nameColor = "|c3BC6DCChalutier|r",
 	author = "|c00C000Provision|r",
-	version = "1.0.1", --4 endroits
+	version = "1.0.2", --4 endroits
 	CPL = nil,
 	defaults =
 	{ --Don't forget header.lua

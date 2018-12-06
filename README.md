@@ -1,4 +1,4 @@
-ProvisionsChalutier 1.0.1
+ProvisionsChalutier 1.0.2
 =============
 
 [![Esoui Prov's Chalutier page](https://img.shields.io/badge/esoui.com-Provision%27s%20Chalutier-green.svg)](https://www.esoui.com/downloads/info2203-ProvisionsChalutierFishing.html)
