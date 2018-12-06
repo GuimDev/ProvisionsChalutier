@@ -66,6 +66,8 @@ function Chalutier_OnAction()
 
 		if additionalInfo == ADDITIONAL_INTERACT_INFO_FISHING_NODE then
 			currentInteractableName = interactableName
+
+			ProvCha.UI.blocInfo:SetHidden(false)
 		elseif currentInteractableName == interactableName then
 			if currentState > FSH_STATE_FISHING then return end
 
@@ -73,7 +75,6 @@ function Chalutier_OnAction()
 		end
 
 		changeState(state)
-		ProvCha.UI.blocInfo:SetHidden(false)
 	elseif currentState ~= FSH_STATE_WAITING then
 		changeState(FSH_STATE_WAITING)
 		ProvCha.UI.blocInfo:SetHidden(true)
@@ -104,6 +105,7 @@ local function Chalutier_OnAddOnLoad(eventCode, addOnName)
 	ProvCha.UI.blocInfo:SetDimensions(64, 6)
 	ProvCha.UI.blocInfo:SetColor(0.396, 0.27, 0)
 	ProvCha.UI.blocInfo:SetAnchor(TOP, ProvCha.UI, TOP, 0, blocInfo)
+	ProvCha.UI.blocInfo:SetHidden(true)
 	ProvCha.UI.blocInfo:SetDrawLevel(2)
 
 	ProvCha.UI.Icon = WINDOW_MANAGER:CreateControl(nil, ProvCha.UI, CT_TEXTURE)
@@ -121,7 +123,7 @@ local function Chalutier_OnAddOnLoad(eventCode, addOnName)
 	EVENT_MANAGER:UnregisterForEvent(ProvCha.name, EVENT_ADD_ON_LOADED)
 
 
-	EVENT_MANAGER:RegisterForUpdate(ProvCha.name .. "Update", 1500, function()
+	EVENT_MANAGER:RegisterForUpdate(ProvCha.name .. "Update", 3000, function()
 		ProvCha.vars.posy = ProvCha.UI:GetTop()
 		ProvCha.vars.posx = ProvCha.UI:GetLeft()
 	end)
